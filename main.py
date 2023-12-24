@@ -5,7 +5,7 @@ import time
 from emailing import send_email
 from threading import Thread
 
-video = cv2.VideoCapture(0)
+video = cv2.VideoCapture(1)
 time.sleep(2)
 
 first_frame = None
@@ -70,5 +70,4 @@ while True:
         break
 
 video.release()
-
 clean_thread.start()
