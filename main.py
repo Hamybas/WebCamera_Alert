@@ -12,6 +12,7 @@ first_frame = None
 status_list = []
 count = 1
 
+
 def clean_folder():
     images = glob.glob('images/*png')
     for image in images:
@@ -59,8 +60,6 @@ while True:
         email_thread.daemon = True
         clean_thread = Thread(target=clean_folder)
         clean_thread.daemon = True
-        #send_email(image_with_object)
-        #clean_folder()
         email_thread.start()
 
     cv2.imshow('Video', frame)
